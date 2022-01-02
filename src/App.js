@@ -10,7 +10,7 @@ import WriteBlog from "./pages/writeBlog/WriteBlog";
 import Register from "./pages/register/Register";
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     <Router>
       <NavBar />

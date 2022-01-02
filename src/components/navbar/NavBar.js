@@ -52,6 +52,26 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="nav-right">
+        <div className="navSearchBox">
+          <form classname="navSearchForm" method="post">
+            <input
+              className="navSearchInput"
+              id="header_search_query"
+              type="search"
+              name="header_search_query"
+              value=""
+              placeholder="খোঁজ....."
+            />
+            <button
+              className="navSearchBtn"
+              type="submit"
+              name="header_search_submit"
+            >
+              <i className=" nav-search-icon fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+
         {user && (
           <img
             className="nav-right-img"
@@ -59,7 +79,6 @@ export default function NavBar() {
             alt="profilePicture"
           />
         )}
-        <i className=" nav-search-icon fas fa-search"></i>
       </div>
     </div>
   );
