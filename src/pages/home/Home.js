@@ -1,14 +1,14 @@
 import "./home.css";
-import Hero from "../../hero/Hero";
-import AllPosts from "../../posts/AllPosts";
-import SideBar from "../../sidebar/SideBar";
+import Hero from "../../components/hero/Hero";
+import Posts from "../../components/allPosts/Posts";
+import SideBar from "../../components/sidebar/SideBar";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <div className="home">
-        <AllPosts />
+        <Posts />
         <SideBar />
       </div>
     </>

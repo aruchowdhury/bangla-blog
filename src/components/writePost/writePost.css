@@ -1,0 +1,64 @@
+.writePost {
+  flex: 9;
+  margin-top: 20px;
+}
+
+.writePostImg {
+  margin-left: 25px;
+  width: 70vw;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.writePostForm {
+  position: relative;
+}
+
+.writePostFormGroup {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.writePostIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444444;
+  cursor: pointer;
+  font-size: 25px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.textInput {
+  font-size: 30px;
+  border: none;
+  padding: 15px;
+  width: 50vw;
+}
+.textInput:focus {
+  outline: none;
+}
+
+.writeText {
+  font-size: 20px;
+  height: 100vh;
+}
+
+.submit {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: #a1504f;
+  background-color: #d4d4d4;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.submit:hover {
+  background-color: #999999;
+  transition: 0.3s;
+}
