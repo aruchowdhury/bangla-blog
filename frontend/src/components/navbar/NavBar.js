@@ -24,11 +24,6 @@ export default function NavBar() {
               ব্লগ লিখুন
             </Link>
           </li>
-          <li className="center-list-item">
-            <Link className="link" to="/">
-              যোগাযোগ
-            </Link>
-          </li>
           {user ? (
             <li className="center-list-item">
               <Link className="link" to="/login">

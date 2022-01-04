@@ -9,6 +9,7 @@
   align-items: center;
   font-family: "Noto Serif Bengali", serif;
   z-index: 999;
+  padding: 10px 0;
 }
 .nav-left,
 .nav-right {
@@ -25,13 +26,19 @@
 .nav-left-icon {
   font-size: 25px;
   margin-right: 10px;
+  margin-top: 5px;
   cursor: pointer;
-  font-family: "Atma", cursive, serif;
+  font-family: "Noto Sans Bengali", sans-serif;
   color: #a1504f;
-  background-color: #d4d4d4;
-  padding: 1px 7px 0 2px;
+  font-weight: 700;
+  border: 2px solid #d16967;
   border-radius: 5px;
-  box-shadow: 6px 1px 5px 1px #d4d3d3;
+  padding: 1px 7px 0 2px;
+}
+
+.nav-left-icon:hover {
+  opacity: 0.8;
+  transition: 0.5s;
 }
 
 .nav-right-img {
@@ -56,6 +63,11 @@
   cursor: pointer;
   color: #555555;
 }
+.center-list-item:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+  color: #a1504f;
+}
 
 .nav-search-icon {
   font-size: 15px;
@@ -68,9 +80,6 @@
   transition: 0.5s;
 }
 
-.navSearchBox {
-}
-
 .navSearchForm {
   position: relative;
 }
@@ -80,6 +89,7 @@
   border: none;
   background-color: #e4e3e3;
   border-radius: 15px;
+  color: #999999;
 }
 
 .navSearchBtn {
