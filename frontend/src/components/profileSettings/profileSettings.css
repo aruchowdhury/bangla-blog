@@ -54,6 +54,10 @@
   margin-left: 10;
   cursor: pointer;
 }
+.profilePictureIconSettings:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
 
 .settingsForm > label {
   font-size: 20px;

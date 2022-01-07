@@ -9,6 +9,24 @@ export default function Hero() {
         <span className="heroTitle2">
           আকাশে ছড়ায়ে আছে নীল হ'য়ে আকাশে-আকাশে;
         </span>
+
+        <div className="searchBox">
+          <form classname="searchForm" method="post">
+            <input
+              className="searchInput"
+              type="text"
+              name="header_search_query"
+              placeholder="খোঁজ....."
+            />
+            <button
+              className="searchBtn"
+              type="submit"
+              name="header_search_submit"
+            >
+              <i className="search-icon fas fa-search"></i>
+            </button>
+          </form>
+        </div>
       </div>
       <img
         className="heroImage"

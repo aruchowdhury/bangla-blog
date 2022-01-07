@@ -57,3 +57,37 @@
   font-size: 30px;
   font-weight: 500;
 }
+
+.singlePostAuthor:hover {
+  color: #a1504f;
+  transition: 0.5s;
+}
+
+.textInput {
+  font-size: 30px;
+  border: none;
+  padding: 15px;
+  width: 50vw;
+}
+.writeText {
+  font-size: 20px;
+  height: 100vh;
+}
+
+.updateSubmit {
+  color: #a1504f;
+  background-color: #d4d4d4;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.updateSubmit:hover {
+  background-color: #999999;
+  transition: 0.3s;
+}

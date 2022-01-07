@@ -16,9 +16,9 @@
 .sidebarTitle {
   margin: 10px;
   padding: 5px;
-  width: 80%;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  width: 70%;
+
+  border-bottom: 2px dotted #999;
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -26,12 +26,13 @@
   align-items: center;
 }
 
-.sidebarItem > img {
+.sidebarItem > h1 {
   margin-top: 15px;
+  font-size: 25px;
 }
 
 .sidebarItem > p {
-  padding: 30px;
+  padding: 20px;
 }
 .sidebarList {
   list-style: none;
@@ -53,8 +54,18 @@
   justify-content: center;
 }
 
+.sidebarListItem:hover {
+  transition: 0.5s;
+  color: #a1504f;
+}
+
 .sidebarIcon {
   font-size: 16px;
   margin-left: 15px;
   cursor: pointer;
+}
+
+.sidebarIcon:hover {
+  transition: 0.5s;
+  color: #a1504f;
 }

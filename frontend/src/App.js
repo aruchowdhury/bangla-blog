@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/home/Home";
@@ -8,9 +8,10 @@ import Settings from "./pages/settings/Settings";
 import SingleBlog from "./pages/singleBlog/SingleBlog";
 import WriteBlog from "./pages/writeBlog/WriteBlog";
 import Register from "./pages/register/Register";
+import { Context } from "./context/Context";
 
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <Router>
       <NavBar />

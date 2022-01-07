@@ -47,6 +47,10 @@
   background-color: #d66d6b;
   transition: 0.3s;
 }
+.loginButton:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
 
 .loginRegisterButton {
   cursor: pointer;

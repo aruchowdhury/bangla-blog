@@ -46,7 +46,7 @@
   height: 100vh;
 }
 
-.submit {
+.writeSubmit {
   position: absolute;
   top: 40px;
   right: 20px;
@@ -58,7 +58,7 @@
   cursor: pointer;
   font-size: 16px;
 }
-.submit:hover {
+.writeSubmit:hover {
   background-color: #999999;
   transition: 0.3s;
 }
