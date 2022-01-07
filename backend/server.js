@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const path = require("path");
 
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
@@ -11,15 +12,20 @@ const categoryRoute = require("./routes/categories");
 
 dotenv.config();
 mongoose
-  .connect(process.env.MONGO_URI)
-  .then(console.log("connected to MOngo"))
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: true,
+  })
+  .then(console.log("connected to MongoDB"))
   .catch((error) => console.log(error));
 
 const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
+  destination: (req, imageFile, callback) => {
     callback(null, "images");
   },
-  filename: (req, file, callback) => {
+  filename: (req, imageFile, callback) => {
     callback(null, req.body.name);
   },
 });
@@ -31,6 +37,7 @@ app.post("/upload", upload.single("file"), (req, res) => {
 });
 
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 app.use("/auth", authRoute);
 app.use("/users", userRoute);

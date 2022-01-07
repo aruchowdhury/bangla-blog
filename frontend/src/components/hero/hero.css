@@ -15,12 +15,12 @@
 }
 .heroTitle1 {
   position: absolute;
-  top: 31%;
+  top: 32%;
   font-size: 16px;
 }
 .heroTitle2 {
   position: absolute;
-  top: 34%;
+  top: 35%;
   font-size: 16px;
 }
 .heroImage {
@@ -30,4 +30,39 @@
   margin-bottom: 10px;
   overflow: hidden;
   object-fit: cover;
+}
+
+.search-icon {
+  font-size: 15px;
+  color: #999999;
+  cursor: pointer;
+}
+.search-icon:hover {
+  color: #a1504f;
+  transition: 0.5s;
+}
+
+.searchBox {
+  position: absolute;
+  top: 45%;
+}
+.searchForm {
+  position: relative;
+}
+
+.searchInput {
+  border: none;
+  background-color: #e4e3e3;
+  border-radius: 15px;
+  color: #444444;
+  width: 400px;
+  padding: 9px;
+}
+
+.searchBtn {
+  position: relative;
+  top: 2px;
+  right: 35px;
+  background: none;
+  border: none;
 }

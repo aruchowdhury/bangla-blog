@@ -1,31 +1,39 @@
 import "./sidebar.css";
 
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
 export default function SideBar() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const res = await axios.get("/categories");
+      setCategories(res.data);
+    };
+    fetchCategory();
+  }, []);
+
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">About Me</span>
-        <img
-          className=""
-          src="https://images.pexels.com/photos/4065890/pexels-photo-4065890.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100"
-          alt="SidebarImage"
-        />
+        <h1>সম্পাদকীয়</h1>
         <p className="">
           গাছে ছিল দুটি পাখি রঙ তাদের সাদা। আমি আর তুমি এক অদৃশ্য মায়ায় বাধা।।
         </p>
         <div className="sidebarItem">
-          <span className="sidebarTitle">Categories</span>
+          <span className="sidebarTitle">বিভাগ</span>
           <ul className="sidebarList">
-            <li className="sidebarListItem">প্রেম</li>
-            <li className="sidebarListItem">প্রকৃতি</li>
-            <li className="sidebarListItem">পূজা</li>
-            <li className="sidebarListItem">বোধি</li>
-            <li className="sidebarListItem">গল্প</li>
-            <li className="sidebarListItem">প্রজ্ঞা</li>
+            {categories.map((category) => (
+              <Link className="link" to={`/?category=${category.name}`}>
+                <li className="sidebarListItem">{category.name}</li>
+              </Link>
+            ))}
           </ul>
         </div>
         <div className="sidebarItem">
-          <span className="sidebarTitle">Social Media</span>
+          <span className="sidebarTitle">সামাজিক যোগাযোগ</span>
           <div className="sidebarSocialIcon">
             <i className="sidebarIcon fab fa-instagram-square"></i>
             <i className="sidebarIcon fab fa-facebook-square"></i>

@@ -1,7 +1,7 @@
 .nav {
   width: 100%;
   height: 60px;
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(250, 248, 248);
   position: sticky;
   top: 0;
   bottom: 10px;
@@ -9,7 +9,7 @@
   align-items: center;
   font-family: "Noto Serif Bengali", serif;
   z-index: 999;
-  padding: 10px 0;
+  padding: 2px 0;
 }
 .nav-left,
 .nav-right {
@@ -29,9 +29,9 @@
   margin-top: 5px;
   cursor: pointer;
   font-family: "Noto Sans Bengali", sans-serif;
-  color: #a1504f;
+  color: #777777;
   font-weight: 700;
-  border: 2px solid #d16967;
+  border: 2px solid #777777;
   border-radius: 5px;
   padding: 1px 7px 0 2px;
 }
@@ -39,6 +39,7 @@
 .nav-left-icon:hover {
   opacity: 0.8;
   transition: 0.5s;
+  color: #a1504f;
 }
 
 .nav-right-img {
@@ -46,9 +47,14 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
+}
+.nav-right-img:hover {
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
-.center-list {
+.list {
   display: flex;
   justify-content: center;
   margin: 0;
@@ -56,46 +62,32 @@
   list-style: none;
 }
 
-.center-list-item {
+.list-item {
   margin-right: 20px;
   font-size: 18px;
   font-weight: 400;
   cursor: pointer;
   color: #555555;
 }
-.center-list-item:hover {
+.list-item:hover {
   opacity: 0.8;
   transition: 0.5s;
   color: #a1504f;
 }
 
-.nav-search-icon {
-  font-size: 15px;
-  color: #999999;
+.list-item-right {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 400;
   cursor: pointer;
-  margin-left: 15px;
-}
-.nav-search-icon:hover {
   color: #a1504f;
-  transition: 0.5s;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background-color: #d1cdcd;
 }
 
-.navSearchForm {
-  position: relative;
-}
-
-.navSearchInput {
-  padding: 8px;
-  border: none;
-  background-color: #e4e3e3;
-  border-radius: 15px;
-  color: #999999;
-}
-
-.navSearchBtn {
-  position: relative;
-  top: 2px;
-  right: 45px;
-  background: none;
-  border: none;
+.list-item-right:hover {
+  transition: 0.7s;
+  color: #a1504f;
+  opacity: 0.5;
 }

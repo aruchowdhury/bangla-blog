@@ -1,18 +1,12 @@
 import "./posts.css";
 import Post from "./Post";
 
-export default function AllPosts() {
+export default function AllPosts({ posts }) {
   return (
     <div className="posts">
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {posts.map((post) => (
+        <Post post={post} />
+      ))}
     </div>
   );
 }
