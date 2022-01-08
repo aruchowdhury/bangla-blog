@@ -7,6 +7,7 @@
   bottom: 10px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   font-family: "Noto Serif Bengali", serif;
   z-index: 999;
   padding: 2px 0;
@@ -90,4 +91,40 @@
   transition: 0.7s;
   color: #a1504f;
   opacity: 0.5;
+}
+
+.hamBurger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-center {
+    display: none;
+  }
+  .nav-left {
+    flex: none;
+    padding-left: 3%;
+  }
+  .nav-right {
+    display: none;
+  }
+  .list-item-right {
+    display: none;
+  }
+  .nav-right-img {
+    display: none;
+  }
+  .list-item {
+    display: none;
+  }
+  .hamBurger {
+    display: block;
+    color: #555555;
+    position: absolute;
+    top: -18%;
+    right: -3%;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }

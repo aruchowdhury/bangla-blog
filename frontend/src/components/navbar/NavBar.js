@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 
-export default function NavBar() {
+export default function NavBar({ handleNavClick }) {
   const { user, dispatch } = useContext(Context);
   const publicFolder = "http://localhost:8000/images/";
 
@@ -39,6 +39,9 @@ export default function NavBar() {
             </Link>
           </li>
         </ul>
+      </div>
+      <div className="hamBurger" onClick={handleNavClick}>
+        <i class="fas fa-bars"></i>
       </div>
       <div className="nav-right">
         {user ? (

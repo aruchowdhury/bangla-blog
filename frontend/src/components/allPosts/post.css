@@ -50,3 +50,12 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+
+@media (max-width: 600px) {
+  .postImg {
+    height: 200px;
+  }
+  .post {
+    margin: 0 0 40px 0;
+  }
+}

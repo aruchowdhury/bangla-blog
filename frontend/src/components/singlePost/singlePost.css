@@ -91,3 +91,12 @@
   background-color: #999999;
   transition: 0.3s;
 }
+
+@media (max-width: 600px) {
+  .singlePostWrapper {
+    padding: 0 20px 20px 0;
+  }
+  .singlePostImg {
+    height: 200px;
+  }
+}

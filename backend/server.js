@@ -14,26 +14,28 @@ dotenv.config();
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // useCreateIndex: true,
-    // useFindAndModify: true,
   })
   .then(console.log("connected to MongoDB"))
   .catch((error) => console.log(error));
 
 const storage = multer.diskStorage({
-  destination: (req, imageFile, callback) => {
+  destination: (req, file, callback) => {
     callback(null, "images");
   },
-  filename: (req, imageFile, callback) => {
+  filename: (req, file, callback) => {
     callback(null, req.body.name);
   },
 });
 
 const upload = multer({ storage: storage });
 
-app.post("/upload", upload.single("file"), (req, res) => {
-  res.status(200).json("file has been uploaded");
+app.post("/upload", upload.single("file"), async (req, res) => {
+  try {
+    res.status(200).json("file has been uploaded");
+  } catch (error) {
+    res.status(500).json(error);
+    return;
+  }
 });
 
 app.use(express.json());
@@ -44,6 +46,8 @@ app.use("/users", userRoute);
 app.use("/posts", postRoute);
 app.use("/categories", categoryRoute);
 
-app.listen("8000", () => {
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
   console.log("backend is running");
 });

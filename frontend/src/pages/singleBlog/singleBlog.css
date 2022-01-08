@@ -1,3 +1,10 @@
 .singleBlog {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .singleBlog {
+    flex-direction: column;
+    margin: 20px;
+  }
+}

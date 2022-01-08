@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
     res.status(200).json(savedPost);
   } catch (error) {
     res.status(500).json(error);
+    return;
   }
 });
 
@@ -34,9 +35,11 @@ router.put("/:id", async (req, res) => {
       }
     } else {
       res.status(401).json("You can update only your post!");
+      return;
     }
   } catch (error) {
     res.status(500).json(error);
+    return;
   }
 });
 
@@ -51,12 +54,15 @@ router.delete("/:id", async (req, res) => {
         res.status(200).json("Post has been deleted...");
       } catch (error) {
         res.status(500).json(error);
+        return;
       }
     } else {
       res.status(401).json("You can delete only your post!");
+      return;
     }
   } catch (error) {
     res.status(500).json(error);
+    return;
   }
 });
 
@@ -68,6 +74,7 @@ router.get("/:id", async (req, res) => {
     res.status(200).json(post);
   } catch (error) {
     res.status(500).json(error);
+    return;
   }
 });
 
@@ -92,6 +99,7 @@ router.get("/", async (req, res) => {
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json(error);
+    return;
   }
 });
 
